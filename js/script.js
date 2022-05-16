@@ -2,12 +2,11 @@
 (function () {
 	const container = document.querySelector('.container')
 	const main = document.querySelector('main')
-	let LargeurContainer
 	window.addEventListener('resize', GetWidthEl)
 	GetWidthEl()
 	function GetWidthEl() {
 		window.innerWidth <= 1024 ? document.querySelector('.bg').style.display = 'block' : document.querySelector('.bg').style.display = 'none'
-		LargeurContainer = container.getBoundingClientRect().width
+		const LargeurContainer = container.getBoundingClientRect().width
 		main.style.height = LargeurContainer - (window.innerWidth - window.innerHeight) + 'px'
 	}
 	//---------------------------------------------------------------------------------------------------------------------
